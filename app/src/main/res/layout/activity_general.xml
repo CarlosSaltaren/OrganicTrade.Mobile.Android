@@ -1,16 +1,184 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".GeneralActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
 
-</RelativeLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F0F0F0">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:padding="0dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                android:background="#ffff"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_lordoftherings"
+                    android:layout_weight="0.50" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:id="@+id/textName" />
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/textName2" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Birthday"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:id="@+id/textBirthday" />
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:textSize="15sp"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/textBirthday2" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="place of birth"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:id="@+id/textPlace" />
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:text=""
+                                android:id="@+id/texPlace2" />
+                        </LinearLayout>
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biography"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/textBiography" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:id="@+id/textBiography2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movies"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/textMovies" />
+
+                <Gallery
+                    android:id="@+id/horizontallistview2"
+                    android:layout_width="fill_parent"
+                    android:background="@color/list_background_pressed"
+                    android:layout_height="wrap_content"
+                    android:spacing="2px" />
+
+                <!-- Framelayout to display Fragments -->
+                <FrameLayout
+                    android:id="@+id/mygallery2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
